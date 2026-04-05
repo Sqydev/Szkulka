@@ -1,0 +1,1 @@
+Szkulka work dib
