@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #999;
+	padding: 10px 20px;
+	position: relative;
+}
+
+.logo {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.links {
+	display: flex;
+	list-style: none;
+	gap: 20px;
+}
+
+.links a {
+	color: white;
+	text-decoration: none;
+	padding: 0px 6px;
+}
+
+.chamburgerThing {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.chamburgerThing span {
+	width: 23;
+	height: 3;
+	background: white;
+	margin: 4px 0;
+}
+
+#chamburger {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.chamburgerThing {
+		display: flex;
+	}
+
+	.links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background: #999;
+		position: absolute;
+		top: 60px;
+		left: 0;
+	}
+
+	/* Jakieś dziwne magiczne if cssa */
+	#chamburger:checked ~ .links {
+		display: flex;
+	}
+}
+
+@media (max-width: 900px) {
+	.links {
+		flex-wrap: wrap;
+		max-width: 300px;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 901px) {
+	.links {
+		flex-wrap: nowrap;
+	}
+}
