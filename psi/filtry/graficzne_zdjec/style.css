@@ -1,0 +1,32 @@
+.image-container {
+	display: flex;
+
+	align-items: center;
+	flex-direction: column;
+}
+
+.imge:nth-child(1):hover {
+	filter: blur(10px);
+}
+
+.imge:nth-child(2):hover {
+	filter: brightness(50%);
+}
+
+.imge:nth-child(3):hover {
+	filter:grayscale(100%);
+}
+
+.imge:nth-child(4):hover {
+	filter: saturate(50000000%);
+}
+
+.imge:nth-child(5):hover {
+	background-color: red;
+	filter: opacity(50%);
+	filter: invert();
+}
+
+.imge:nth-child(6):hover {
+	filter: invert();
+}
